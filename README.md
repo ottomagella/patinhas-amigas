@@ -35,14 +35,23 @@ O site foi criado com foco em **acessibilidade**, **design responsivo** e **uso 
 ## 🧱 Estrutura do Projeto
 
 📦 patinhas-amigas/
+
 ┣ 📜 index.html
+
 ┣ 📜 style.css
+
 ┣ 📜 README.md
+
 ┣ 📂 /imagens
+
 ┃ ┣ 🐶 omeprazol.jpg
+
 ┃ ┣ 🐾 molly.jpg
+
 ┃ ┗ 🐕 amarelão.jpg
+
 ┗ 📂 /assets
+
 ┗ (ícones, fontes, etc.)
 
 
