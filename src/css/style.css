@@ -1,0 +1,429 @@
+/* Projeto: Plataforma para ONG de animais - Patinhas Amigas */
+/* Desenvolvido por: Otávio Magella 
+
+/* ===== VARIÁVEIS DE CORES ===== */
+:root {
+    --caramelo: #D2691E;
+    --caramelo-claro: #E9967A;
+    --caramelo-suave: #F5DEB3;
+    --caramelo-escuro: #8B4513;
+    --branco: #FFFFFF;
+    --cinza: #333333;
+    --cinza-claro: #666;
+    --cinza-fundo: #f9f9f9;
+    --sombra: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--cinza);
+    background-color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o footer fique no final */
+}
+
+/* ===== HEADER E NAVEGAÇÃO ===== */
+header {
+    background-color: var(--caramelo);
+    padding: 1rem 0;
+    box-shadow: var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--caramelo-claro);
+    transform: translateY(-2px);
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex: 1;
+    width: 100%;
+}
+
+/* Hierarquia de títulos semântica - h1 para título principal da página */
+h1 {
+    color: var(--caramelo-escuro);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    border-bottom: 3px solid var(--caramelo-suave);
+    padding-bottom: 1rem;
+}
+
+h2 {
+    color: var(--caramelo);
+    margin: 2rem 0 1rem 0;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: var(--caramelo-escuro);
+    margin: 1.5rem 0 0.5rem 0;
+    font-size: 1.3rem;
+}
+
+h4 {
+    color: var(--cinza);
+    margin: 1rem 0 0.5rem 0;
+}
+
+/* ===== SEÇÕES E ARTIGOS ===== */
+/* Uso de sections para agrupar conteúdo relacionado semanticamente */
+section {
+    background: var(--cinza-fundo);
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    border-left: 4px solid var(--caramelo); /* Destaque visual */
+}
+
+/* Articles para conteúdo auto-contido (cada animal, cada projeto) */
+article {
+    background: var(--branco);
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+}
+
+/* ===== LISTAS ===== */
+ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* ===== FORMULÁRIOS ===== */
+/* Formulário de cadastro com validação HTML5 */
+form {
+    background: var(--cinza-fundo);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+}
+
+/* Fieldset para agrupamento lógico de campos (requisito do projeto) */
+fieldset {
+    border: 2px solid var(--caramelo-suave);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    background: var(--branco);
+}
+
+legend {
+    color: var(--caramelo-escuro);
+    font-weight: bold;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--cinza);
+}
+
+/* Inputs com validação HTML5 nativa (required, pattern, type) */
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--caramelo);
+    box-shadow: 0 0 5px var(--caramelo-claro);
+}
+
+/* ===== CHECKBOXES ===== */
+/* Alinhamento perfeito dos checkboxes usando flexbox */
+fieldset div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background: var(--cinza-fundo);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+fieldset div:hover {
+    background: var(--caramelo-suave);
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+    margin-bottom: 0;
+    accent-color: var(--caramelo);
+}
+
+fieldset label {
+    display: inline;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* ===== BOTÕES ===== */
+button {
+    background-color: var(--caramelo);
+    color: var(--branco);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 2rem auto 0;
+}
+
+button:hover {
+    background-color: var(--caramelo-escuro);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(210, 105, 30, 0.3);
+}
+
+/* ===== SEÇÃO ANIMAIS PARA ADOÇÃO ===== */
+/* Layout responsivo com flexbox para os cards dos animais */
+#animais-adocao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Card individual para cada animal */
+#animais-adocao article {
+    width: 280px;
+    text-align: center;
+    padding: 1rem;
+    background: var(--branco);
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Garante que a imagem nunca saia do card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#animais-adocao article:hover {
+    transform: translateY(-5px);
+}
+
+/* ESTILIZAÇÃO DE IMAGENS */
+#animais-adocao img,
+section img,
+article img {
+    width: 100%;
+    max-width: 280px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid var(--caramelo);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 1rem;
+    display: block;
+    margin-right: auto;
+}
+
+
+#animais-adocao h3 {
+    color: var(--caramelo-escuro);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+#animais-adocao p {
+    color: var(--cinza-claro);
+    margin-bottom: 0;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    #animais-adocao article {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    #animais-adocao img {
+        height: 160px; /* Mantém o mesmo formato reduzido */
+    }
+}
+
+@media (max-width: 480px) {
+    #animais-adocao article {
+        max-width: 240px;
+    }
+
+    #animais-adocao img {
+        height: 150px;
+    }
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: var(--caramelo-escuro);
+    color: var(--branco);
+    padding: 3rem 2rem;
+    margin-top: auto; /* Empurra o footer para o final */
+    width: 100%;
+}
+
+footer > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer h3 {
+    color: var(--caramelo-suave);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--caramelo);
+    padding-bottom: 0.5rem;
+}
+
+footer address {
+    font-style: normal;
+    line-height: 1.8;
+}
+
+footer ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+footer li {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: var(--caramelo-suave);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--branco);
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVIDADE - MOBILE FIRST ===== */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    section, article {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    footer > div {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    form {
+        padding: 1rem;
+    }
+    
+    fieldset {
+        padding: 1rem;
+    }
+    
+    /* Ajustes para imagens em dispositivos móveis */
+    #animais-adocao {
+        gap: 1.5rem;
+    }
+    
+    #animais-adocao article {
+        width: 100%;
+        max-width: 260px;
+    }
+    
+    #animais-adocao img {
+        width: 200px;   /* Tamanho reduzido para mobile */
+        height: 160px;
+    }
+}
+
+/* Dispositivos muito pequenos (smartphones) */
+@media (max-width: 480px) {
+    #animais-adocao article {
+        max-width: 240px;
+    }
+    
+    #animais-adocao img {
+        width: 180px;
+        height: 150px;
+    }
+}
+
+/* ===== UTILITÁRIOS ===== */
+.text-center {
+    text-align: center;
+}
+
+.mt-2 { margin-top: 2rem; }
+.mb-2 { margin-bottom: 2rem; }
+.p-2 { padding: 2rem; }
