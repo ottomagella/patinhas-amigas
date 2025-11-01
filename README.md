@@ -80,14 +80,6 @@ O site foi criado com foco em **acessibilidade**, **design responsivo** e **uso 
 
 ---
 
-## 📸 Exemplo de Interface
-
-| Página Principal | Cards de Adoção |
-|------------------|----------------|
-| ![Home](imagens/exemplo-home.png) | ![Adoção](imagens/exemplo-adocao.png) |
-
----
-
 ## 🧾 Licença
 
 Este projeto é de uso **educacional** e pode ser reutilizado livremente para fins de **aprendizado** ou **projetos acadêmicos**.
@@ -98,8 +90,8 @@ Este projeto é de uso **educacional** e pode ser reutilizado livremente para fi
 
 **Otávio Magella**  
 Técnico em Eletrônica e Suporte | Estudante de ADS  
-📧 [otavio.magella@example.com]  
-🌐 [LinkedIn](https://linkedin.com/in/otaviomagella)
+📧 [contato.otaviomagella@outlook.com]  
+🌐 [LinkedIn](https://www.linkedin.com/in/ottomagella)
 
 ---
 
