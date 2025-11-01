@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head> <!-- Projeto: Plataforma para ONG de animais - Patinhas Amigas --> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Projeto voltado para adoção e cuidado de animais. Encontre seu novo melhor amigo!">
@@ -9,63 +9,72 @@
     <meta name="author" content="Otto Magella">
     <title>Instituto Patinhas Amigas - Adoção e Cuidado de Animais</title>
     <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/script.js" defer></script>
 </head>
 
 <body>
     <header>
         <nav aria-label="Menu Principal">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="projetos.html">Nossos Projetos</a></li>
-                    <li><a href="cadastro.html">Seja Voluntário</a></li>
-                </ul>
-    </nav>
+            <button id="menu-toggle" aria-label="Abrir menu">☰</button>
+            <ul id="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Nossos Projetos</a></li>
+                <li><a href="cadastro.html">Seja Voluntário</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <h1>Encontre o seu Melhor Amigo e Salve uma Vida</h1>
+    <main class="container">
+        <h1 class="text-center">Encontre o seu Melhor Amigo e Salve uma Vida</h1>
 
-        <section aria-labelledby="sobre-ong">
+        <section aria-labelledby="sobre-ong" class="grid-section">
             <h2 id="sobre-ong">Sobre a ONG Patinhas Amigas</h2>
             <p>O Patinhas Amigas nasceu com o propósito de conectar animais que precisam de um lar a pessoas dispostas a oferecer amor e cuidado. Acreditamos que cada vida importa — por isso, trabalhamos para resgatar, cuidar e promover a adoção responsável de cães e gatos em situação de abandono.</p>
             <p>Nossa missão é criar uma rede de empatia, conscientizando a sociedade sobre a importância da proteção animal. Com a ajuda de voluntários, parceiros e adotantes, transformamos histórias de sofrimento em finais felizes.</p>
             <p>Se você também acredita que amor não se compra, junte-se a nós nessa causa. 💛</p>
         </section>
 
-        <section aria-labelledby="animais-adocao">
+        <section aria-labelledby="animais-adocao" class="grid-section">
             <h2 id="animais-adocao">Animais para Adoção</h2>
 
-            <article>
+            <article class="card">
+                <img src="src/assets/images/omeprazol-macho.jpg" alt="vira-lata Omeprazol macho">
                 <h3>Omeprazol - Vira Lata</h3>
                 <p>Macho, 1 ano, vacinado e castrado</p>
-                <img src="src/assets/images/omeprazol-macho.jpg" alt="vira-lata omeprazol-macho">
+                <span class="badge">Disponível</span>
             </article>
-            <article>
+
+            <article class="card">
+                <img src="src/assets/images/molly-femea.jpg" alt="pitbull Molly fêmea">
                 <h3>Molly - Pit Bull</h3>
-                <p>Fêmea, 3 anos, vacinado e castrada</p>
-                <img src="src/assets/images/molly-femea.jpg" alt="pitbull molly-femea">
+                <p>Fêmea, 3 anos, vacinada e castrada</p>
+                <span class="badge">Disponível</span>
             </article>
-            <article>
+
+            <article class="card">
+                <img src="src/assets/images/amarelao-macho.png" alt="vira-lata Amarelão macho">
                 <h3>Amarelão - Vira Lata</h3>
                 <p>Macho, 6 anos, vacinado e castrado</p>
-                <img src="src/assets/images/amarelao-macho.png" alt="vira-lata amarelao-macho">
+                <span class="badge">Disponível</span>
             </article>
-            <article>
+
+            <article class="card">
+                <img src="src/assets/images/xoxoro-macho.jpg" alt="vira-lata Xororó macho">
                 <h3>Xororó - Vira Lata</h3>
                 <p>Macho, 5 meses, vacinado</p>
-                <img src="src/assets/images/xoxoro-macho.jpg" alt="vira-lata xoxoro-macho">
+                <span class="badge">Disponível</span>
             </article>
         </section>
 
-        <section aria-labelledby="depoimentos">
+        <section aria-labelledby="depoimentos" class="grid-section">
             <h2 id="depoimentos">Depoimentos de Quem Adotou</h2>
 
-            <article>
+            <article class="card alert alert-success">
                 <blockquote>"Adotar o Omeprazol foi a melhor decisão da minha vida! Ele trouxe alegria para nossa casa."</blockquote>
                 <cite>- Maria Silva, adotante há 6 meses</cite>
             </article>
-    
-            <article>
+
+            <article class="card alert alert-success">
                 <blockquote>"A equipe da Patinhas Amigas foi incrível em todo processo. Nosso Molly é parte da família!"</blockquote>
                 <cite>- João Santos, adotante há 1 ano</cite>
             </article>
@@ -76,12 +85,11 @@
         <div>
             <h3>Contato</h3>
             <address>
-            <p>📧 contato@patinhasamigas.org.br</p>
-            <p>📞 (11) 9999-8888</p>
-            <p>📍 Rua dos Animais, 123 - São Paulo/SP</p>
+                <p>📧 contato@patinhasamigas.org.br</p>
+                <p>📞 (11) 9999-8888</p>
+                <p>📍 Rua dos Animais, 123 - São Paulo/SP</p>
             </address>
         </div>
-    
         <div>
             <h3>Links Rápidos</h3>
             <ul>
@@ -90,16 +98,14 @@
                 <li><a href="cadastro.html">Seja Voluntário</a></li>
             </ul>
         </div>
-    
         <div>
             <h3>Nos Acompanhe</h3>
-                <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">YouTube</a></li>
-                </ul>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">YouTube</a></li>
+            </ul>
         </div>
-    
         <div>
             <p>&copy; 2024 Patinhas Amigas - CNPJ: 12.345.678/0001-90</p>
             <p>Todos os direitos reservados</p>
