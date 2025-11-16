@@ -35,6 +35,31 @@
     --sombra: 0 2px 10px rgba(0,0,0,0.1);
 }
 
+/* ===== MODO ESCURO E ALTO CONTRASTE ===== */
+.dark-mode {
+    --caramelo: #ffb06b;
+    --caramelo-claro: #ffcb9b;
+    --caramelo-suave: #ffe3c4;
+    --caramelo-escuro: #a45a24;
+
+    --branco: #1a1a1a;
+    --cinza: #e5e5e5;
+    --cinza-claro: #cccccc;
+    --cinza-fundo: #2a2a2a;
+}
+
+.high-contrast {
+    --caramelo: #000000;
+    --caramelo-claro: #ffffff;
+    --caramelo-suave: #ffffff;
+    --caramelo-escuro: #000000;
+
+    --branco: #ffffff;
+    --cinza: #000000;
+    --cinza-claro: #000000;
+    --cinza-fundo: #ffffff;
+}
+
 /* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
 * {
     margin: 0;
@@ -50,6 +75,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+/* ===== ESTILO DE FOCO VISÍVEL ===== */
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+    outline: 3px solid var(--azul);
+    outline-offset: 3px;
 }
 
 /* ===== HEADER E NAVEGAÇÃO ===== */
