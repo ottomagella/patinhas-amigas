@@ -116,14 +116,14 @@ function toggleHighContrast() {
 if (darkModeBtn) darkModeBtn.addEventListener('click', toggleDarkMode);
 if (highContrastBtn) highContrastBtn.addEventListener('click', toggleHighContrast);
 
+
+
 // ================================
 // Menu Mobile Toggle
 // ================================
 const menuToggle = document.getElementById('menu-toggle');
-const navMenu = document.getElementById('menu');
+const menu = document.getElementById('menu');
 
-if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-    });
-}
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active'); // adiciona/remove a classe "active"
+});

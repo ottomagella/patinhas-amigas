@@ -116,12 +116,31 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* Menu mobile toggle */
-nav ul.active {
+
+/* Menu padrão (desktop) */
+nav ul {
+    list-style: none;
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    transition: all 0.3s;
 }
+
+/* Menu mobile - inicialmente escondido */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* esconde por padrão no mobile */
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex; /* mostra quando a classe active é adicionada pelo toggle */
+    }
+}
+
 
 /* ===== CONTEÚDO PRINCIPAL ===== */
 main {
